@@ -1,0 +1,295 @@
+.register-container {
+    width: 50%;
+    /* Groter maken op desktops */
+    max-width: 600px;
+    /* Beperkt de breedte voor een nette layout */
+    margin: 60px auto;
+    /* Meer ruimte bovenaan zodat het loskomt van de navbar */
+    padding: 30px;
+    background: #000000;
+    color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    /* Zachte schaduw voor een professionelere look */
+}
+
+/* Titels en invoervelden */
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+input {
+    width: calc(100% - 20px);
+    /* Houd invoervelden gelijk met de knop */
+    padding: 12px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block;
+    /* Voorkomt onbedoelde inline spacing */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Foutmeldingen */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Registratieknop */
+.register-submit {
+    width: 100%;
+    padding: 12px;
+    background: #ff8800;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Telefooninvoerveld correct uitlijnen */
+.react-tel-input {
+    width: 100% !important;
+}
+
+.react-tel-input .form-control {
+    width: 100% !important;
+    height: 40px;
+    font-size: 1rem;
+    color: #000000 !important;
+    /* Zwarte tekst */
+    background-color: #ffffff !important;
+    /* Witte achtergrond */
+}
+
+/* Stijl voor de dropdown lijst */
+.react-tel-input .flag-dropdown {
+    background-color: #ffffff !important;
+    border-right: 1px solid #ccc !important;
+}
+
+/* Vlag en landnaam correct uitlijnen */
+.react-tel-input .country-list {
+    text-align: left;
+    /* Tekst en vlag links uitlijnen */
+    background-color: #ffffff !important;
+    border-radius: 5px;
+    width: 250px !important;
+    /* Maak de dropdown smaller */
+    color: #000000 !important;
+}
+
+/* Tekstkleur van dropdown-items aanpassen */
+.react-tel-input .country-list .country {
+    color: #000000 !important;
+    padding: 8px 10px;
+}
+
+/* Hover effect voor betere zichtbaarheid */
+.react-tel-input .country-list .country:hover {
+    background-color: #f0f0f0 !important;
+}
+
+/* Zorg ervoor dat de dropdown niet te breed wordt */
+.react-tel-input .country-list .country-name {
+    text-align: left !important;
+    color: #000000 !important;
+}
+
+/* Stijl voor account-type selectie */
+.account-type {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.account-type p {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.account-type label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Knoppen in plaats van radio-buttons */
+.account-button {
+    background-color: #333;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 150px;
+    text-align: center;
+}
+
+.account-button:hover {
+    background-color: #444;
+}
+
+/* Geselecteerde knop */
+.account-button.selected {
+    background-color: #ff8800;
+    border-color: #ff8800;
+    color: #ffffff;
+}
+
+/* Zorg ervoor dat de radio-knoppen goed werken */
+.account-type input {
+    margin-right: 5px;
+}
+
+/* Pop-up achtergrond (donkere overlay) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Pop-up venster */
+.modal-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    font-family: Arial, sans-serif;
+    /* Verander het lettertype naar Arial */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Titel in pop-up */
+.modal-content h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Tekst in pop-up */
+.modal-content p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Sluitknop */
+.close-modal {
+    background: #ff8800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-modal:hover {
+    opacity: 0.8;
+}
+
+/* 📱 Responsiviteit */
+@media (max-width: 768px) {
+    .register-container {
+        width: 80%;
+        /* Kleiner maken op mobiele schermen */
+        max-width: 350px;
+        /* Beperkt de maximale grootte */
+        margin: 60px auto;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+        padding: 10px;
+        width: calc(100% - 20px);
+        /* Zorgt ervoor dat inputvelden gelijk zijn met de knop */
+    }
+
+    .register-submit {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .account-button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .account-type {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 📱 Responsieve aanpassingen voor mobiel */
+@media (max-width: 480px) {
+    .modal-content {
+        width: 80%;
+        /* Maak de pop-up kleiner op mobiel */
+        max-width: 300px;
+        /* Beperkt de breedte */
+        padding: 15px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .modal-content p {
+        font-size: 0.95rem;
+    }
+
+    .close-modal {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}

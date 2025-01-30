@@ -1,0 +1,139 @@
+/* Reset standaardmarges en opvulling */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Algemene styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 40px;
+    /* Grotere padding voor meer zichtbaarheid */
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    /* Grotere lettergrootte */
+    position: relative;
+    z-index: 10;
+    /* Houdt de navbar boven de overlay */
+}
+
+/* Logo styling */
+.nav-logo,
+.menu-toggle,
+.nav-login {
+    font-size: 2rem;
+    /* Groter logo */
+    font-weight: bold;
+    position: relative;
+    z-index: 11;
+    /* Houdt ze boven de overlay */
+}
+
+/* Verwijder eventuele marges en borders */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    /* Grotere tussenruimte */
+    margin: 0;
+    padding: 0;
+    border: none;
+    /* Voeg extra ruimte toe onder de navbar-header */
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 9px 0;
+    /* Maakt het klikbaar gebied groter */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    /* Grotere tekst */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff8800;
+    transform: scale(1.1);
+}
+
+/* Login knop */
+.nav-login a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    /* Grotere tekst */
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-login a:hover {
+    color: #ff8800;
+    transform: scale(1.1);
+}
+
+/* Hamburger menu (alleen zichtbaar op mobiel) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Overlay voor mobiel - dimt alleen de achtergrond */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Donkere overlay */
+    z-index: 9;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Actieve overlay */
+.overlay.active {
+    display: block;
+}
+
+/* Responsiviteit */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        gap: 15px;
+        display: none;
+        z-index: 10;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}

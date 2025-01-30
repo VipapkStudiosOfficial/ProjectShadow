@@ -1,0 +1,108 @@
+.login-container {
+    width: 40%;
+    /* Groter maken op desktops */
+    max-width: 500px;
+    /* Beperkt de breedte voor een nette layout */
+    margin: 120px auto;
+    /* Meer ruimte bovenaan zodat het loskomt van de navbar */
+    padding: 30px;
+    background: #000000;
+    color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    /* Zachte schaduw voor een professionelere look */
+}
+
+/* Titels en invoervelden */
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+input {
+    width: calc(100% - 20px);
+    /* Houd invoervelden gelijk met de knoppen */
+    padding: 12px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block;
+    /* Voorkomt onbedoelde inline spacing */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Knoppen */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.register-button {
+    width: 100%;
+    padding: 12px;
+    background: #ff8800;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* 📱 Responsiviteit */
+@media (max-width: 768px) {
+    .login-container {
+        width: 80%;
+        /* Kleiner maken op mobiele schermen */
+        max-width: 350px;
+        /* Beperkt de maximale grootte */
+        margin: 80px auto;
+        /* Houdt ruimte tussen navbar en formulier */
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+        padding: 10px;
+        width: calc(100% - 20px);
+        /* Zorgt ervoor dat inputvelden gelijk zijn met de knop */
+    }
+
+    .login-button,
+    .register-button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
