@@ -39,7 +39,8 @@ const AccountSettings = () => {
                 <input type="tel" id="phone" name="phone" value={userData.phone} onChange={handleChange} required />
 
                 <label htmlFor="password">Nieuw wachtwoord</label>
-                <input type="password" id="password" name="password" placeholder="Voer een nieuw wachtwoord in" onChange={handleChange} />
+                <input type="password" id="password" name="password" placeholder="Voer een nieuw wachtwoord in" onChange={handleChange} aria-describedby="passwordHelp" />
+                <small id="passwordHelp">Laat dit veld leeg als je je wachtwoord niet wilt wijzigen.</small>
 
                 <button type="submit" className="save-button">Wijzigingen opslaan</button>
             </form>
