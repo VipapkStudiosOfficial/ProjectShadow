@@ -1,6 +1,6 @@
 .approve-subscriptions-container {
     /* Kleinere breedte voor betere uitlijning */
-    margin: 40px auto 60px 50px;
+    margin: 40px auto auto -60px;
     /* Links uitlijnen + ruimte boven en onder */
     padding: 20px;
     background: #000;
@@ -9,6 +9,10 @@
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
     width: 800px;
+    transform: scale(0.75);
+    /* Verkleint de gehele container naar 85% op 1920x1080 */
+    transform-origin: top center;
+    /* Zorgt ervoor dat de schaalverkleining gecentreerd blijft */
 }
 
 /* Bedrijfscards */
@@ -80,6 +84,24 @@
     font-size: 1rem;
     margin-top: 10px;
     /* Extra ruimte boven de reden input */
+}
+
+/* Voor ultrawide schermen (3440px breed) */
+@media (min-width: 3440px) {
+    .approve-subscriptions-container {
+        transform: scale(1.1);
+        /* Vergroot lichtjes naar 110% voor ultrawide */
+        margin: 60px auto auto 70px;
+    }
+}
+
+/* Voor bredere schermen (2560px breed) */
+@media (min-width: 2560px) {
+    .approve-subscriptions-container {
+        transform: scale(1);
+        /* Herstelt naar 100% op 2560x1440 */
+        margin: 60px auto auto 70px;
+    }
 }
 
 /* 📱 Mobiele aanpassingen */

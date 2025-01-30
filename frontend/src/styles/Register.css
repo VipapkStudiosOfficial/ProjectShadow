@@ -13,6 +13,10 @@
     font-family: Arial, sans-serif;
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
     /* Zachte schaduw voor een professionelere look */
+    transform: scale(0.80);
+    /* Verkleint de gehele container naar 85% op 1920x1080 */
+    transform-origin: top center;
+    /* Zorgt ervoor dat de schaalverkleining gecentreerd blijft */
 }
 
 /* Titels en invoervelden */
@@ -226,6 +230,24 @@ button:hover {
 
 .close-modal:hover {
     opacity: 0.8;
+}
+
+/* Voor ultrawide schermen (3440px breed) */
+@media (min-width: 3440px) {
+    .register-container {
+        transform: scale(1.1);
+        /* Vergroot lichtjes naar 110% voor ultrawide */
+        margin: 80px auto;
+    }
+}
+
+/* Voor bredere schermen (2560px breed) */
+@media (min-width: 2560px) {
+    .register-container {
+        transform: scale(1);
+        /* Herstelt naar 100% op 2560x1440 */
+        margin: 80px auto;
+    }
 }
 
 /* 📱 Responsiviteit */

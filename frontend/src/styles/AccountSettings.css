@@ -6,9 +6,13 @@
     padding: 20px;
     border-radius: 10px;
     text-align: left;
-    margin: 60px auto auto 50px;
+    margin: 40px auto auto -30px;
     /* Meer witruimte boven (header) en links */
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    transform: scale(0.75);
+    /* Verkleint de gehele container naar 85% op 1920x1080 */
+    transform-origin: top center;
+    /* Zorgt ervoor dat de schaalverkleining gecentreerd blijft */
 }
 
 /* Headings and Text */
@@ -96,6 +100,24 @@
 
 .delete-button:hover {
     background: #c9302c;
+}
+
+/* Voor ultrawide schermen (3440px breed) */
+@media (min-width: 3440px) {
+    .account-settings-container {
+        transform: scale(1.1);
+        /* Vergroot lichtjes naar 110% voor ultrawide */
+        margin: 60px auto auto 70px;
+    }
+}
+
+/* Voor bredere schermen (2560px breed) */
+@media (min-width: 2560px) {
+    .account-settings-container {
+        transform: scale(1);
+        /* Herstelt naar 100% op 2560x1440 */
+        margin: 60px auto auto 70px;
+    }
 }
 
 /* 📱 Mobiele versie: kleiner maken en extra witruimte */
