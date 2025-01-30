@@ -78,6 +78,7 @@ body {
     color: rgb(0, 0, 0);
     font-size: 1.8rem;
     cursor: pointer;
+    display: none;
 }
 
 /* Sidebar - Standaard zichtbaar op desktop */
@@ -187,6 +188,7 @@ body {
     .dashboard-menu-toggle {
         position: relative;
         left: 0;
+        display: block;
     }
 
     .navbar {
