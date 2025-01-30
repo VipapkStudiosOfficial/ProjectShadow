@@ -1,6 +1,7 @@
 .subscription-container {
     max-width: 800px;
-    margin: 40px auto 80px auto;
+    margin: 40px auto 100px auto;
+    /* Extra ondermarge om de footer niet te raken */
     /* Extra ondermarge voor ruimte boven de footer */
     padding: 25px;
     background: #000000;
@@ -187,12 +188,54 @@ table td {
     font-weight: bold;
 }
 
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    /* ✅ Zorgt ervoor dat je kunt scrollen */
+    min-height: 100vh;
+    /* ✅ Zorgt dat de content altijd past */
+}
+
 /* 📱 Mobiele lay-out (abonnementen verticaal) */
 @media (max-width: 768px) {
+    .main-content {
+        height: auto !important;
+        /* ✅ Voorkomt dat een vaste hoogte het scrollen blokkeert */
+        overflow-y: auto !important;
+        /* ✅ Dwingt scrollen af */
+    }
+
+    body {
+        overflow-y: auto !important;
+        /* ✅ Zorgt dat de hele pagina kan scrollen */
+    }
+
     .subscription-container {
         max-width: 85%;
         padding: 20px;
         border-radius: 8px;
+        max-height: 85vh;
+        /* ✅ Beperkt de maximale hoogte zodat scrollen mogelijk is */
+        overflow-y: auto;
+        /* ✅ Maakt scrollen mogelijk als de content te lang is */
+        /* ✅ Voorkomt dat de pagina vast blijft zitten */
+        margin: 40px auto 80px auto;
+        /* Extra ondermarge voor ruimte boven de footer */
+        margin-bottom: 100px;
+        /* ✅ Voegt extra ruimte boven de footer toe */
+    }
+
+    .details-container,
+    .comparison-container {
+        max-height: 70vh;
+        /* ✅ Beperkt hoogte zodat je kunt scrollen */
+        overflow-y: auto;
+        /* ✅ Scrollbaar maken binnen details/vergelijking */
+        position: relative;
+        overflow-y: auto;
+        max-height: 65vh;
+        /* ✅ Zorgt ervoor dat het niet te groot is */
+        padding-bottom: 10px;
     }
 
     h1 {
