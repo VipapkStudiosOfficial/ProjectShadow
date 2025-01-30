@@ -7,6 +7,7 @@ import Register from "./pages/Register";
 import Home from "./pages/Home";
 import DashboardLayout from "./components/DashboardLayout";
 import AccountSettings from "./pages/AccountSettings";
+import ApproveSubscriptions from "./pages/ApproveSubscriptions";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/beheren" element={<WebsiteLayout />}>
           <Route path="" element={<DashboardLayout />}>
             <Route path="accountinstellingen" element={<AccountSettings />} />
+            <Route path="abonnementen-goedkeuren" element={<ApproveSubscriptions />} />
           </Route>
         </Route>
       </Routes>

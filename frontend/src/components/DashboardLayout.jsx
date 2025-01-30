@@ -5,6 +5,11 @@ import "../styles/DashboardLayout.css";
 const DashboardLayout = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    // Sluit de sidebar wanneer een link wordt aangeklikt
+    const handleLinkClick = () => {
+        setMenuOpen(false);
+    };
+
     return (
         <div className="dashboard">
             {/* Header */}
@@ -18,13 +23,15 @@ const DashboardLayout = () => {
             </header>
 
             <div className="content">
-                {/* Sidebar (verandert alleen op mobiel) */}
+                {/* Sidebar */}
                 <nav className={`sidebar ${menuOpen ? "open" : ""}`}>
                     <button className="menu-close" onClick={() => setMenuOpen(false)} aria-label="Close menu">✖</button>
                     <ul>
                         <li><strong>Account</strong></li>
-                        <li><Link to="/beheren/accountinstellingen">Accountinstellingen</Link></li>
-                        <li><a href="#">Zakelijke Accountinstellingen</a></li>
+                        <li><Link to="/beheren/accountinstellingen" onClick={handleLinkClick}>Accountinstellingen</Link></li>
+
+                        <li><strong>Backoffice</strong></li>
+                        <li><Link to="/beheren/abonnementen-goedkeuren" onClick={handleLinkClick}>Abonnementskeuring</Link></li>
                     </ul>
                 </nav>
 

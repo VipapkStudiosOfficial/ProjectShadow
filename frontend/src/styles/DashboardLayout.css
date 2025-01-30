@@ -95,13 +95,26 @@ body {
     flex-direction: column;
 }
 
+/* Sidebar Links - Professioneler uiterlijk */
+.sidebar ul {
+    list-style: none;
+    /* ❌ Verwijdert de bulletpoints */
+    padding: 0;
+    margin: 0;
+}
+
 /* Sidebar-links */
 .sidebar a {
+    text-decoration: none;
+    /* ❌ Verwijdert onderstreping */
     color: white;
     display: block;
-    padding: 0.5rem 0;
-    transition: color 0.3s ease;
+    padding: 10px 15px;
     font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    /* 🟢 Geeft een zachtere uitstraling */
 }
 
 .sidebar a:hover {

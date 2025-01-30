@@ -1,0 +1,114 @@
+.approve-subscriptions-container {
+    /* Kleinere breedte voor betere uitlijning */
+    margin: 40px auto 60px 50px;
+    /* Links uitlijnen + ruimte boven en onder */
+    padding: 20px;
+    background: #000;
+    /* Zwarte achtergrond */
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    width: 800px;
+}
+
+/* Bedrijfscards */
+.subscription-card {
+    background: #222;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border-left: 4px solid #ff8800;
+    /* Oranje accent op de linkerkant */
+}
+
+/* Actieknoppen */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    /* Zet de buttons onder elkaar */
+    gap: 10px;
+    margin-top: 10px;
+    align-items: stretch;
+    /* Zorgt ervoor dat de knoppen de volledige breedte hebben */
+}
+
+/* Knoppen */
+.approve-button,
+.reject-button {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    width: 100%;
+    /* Volledige breedte voor betere leesbaarheid */
+}
+
+/* Goedkeuren knop */
+.approve-button {
+    background: #ff8800;
+    /* Oranje goedkeuren knop */
+    color: black;
+}
+
+.approve-button:hover {
+    background: #e67300;
+}
+
+/* Afwijzen knop */
+.reject-button {
+    background: #A82624;
+    color: white;
+}
+
+.reject-button:hover {
+    background: #C9302C;
+}
+
+/* Inputveld voor afwijzingsreden */
+.reason-input {
+    width: 100%;
+    /* Volledige breedte */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ff8800;
+    /* Oranje rand */
+    background: white;
+    color: black;
+    font-size: 1rem;
+    margin-top: 10px;
+    /* Extra ruimte boven de reden input */
+}
+
+/* 📱 Mobiele aanpassingen */
+@media (max-width: 768px) {
+    .approve-subscriptions-container {
+        max-width: 90%;
+        /* Zorgt ervoor dat het kleiner wordt op mobiel */
+        margin: 30px auto;
+        /* Gelijke marges op mobiel */
+        padding: 15px;
+    }
+
+    .subscription-card {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+    .action-buttons {
+        gap: 8px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .approve-button,
+    .reject-button {
+        width: 100%;
+    }
+
+    .reason-input {
+        margin-top: 8px;
+    }
+}
