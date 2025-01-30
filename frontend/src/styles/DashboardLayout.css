@@ -1,0 +1,163 @@
+/* Algemene stijlen */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    background-color: #ff8800;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/* Header content */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Dashboard titel */
+.dashboard-title {
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Hamburger menu knop */
+.menu-toggle {
+    position: absolute;
+    left: 1rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Sidebar - Standaard zichtbaar op desktop */
+.sidebar {
+    width: 250px;
+    background-color: #000000;
+    color: white;
+    padding: 1rem;
+    height: 2000%;
+    margin: 0;
+    position: relative;
+    left: 0;
+}
+
+/* Sidebar-links */
+.sidebar a {
+    color: white;
+    display: block;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+.sidebar a:hover {
+    color: #ff8800;
+}
+
+/* Sidebar sluiten knop (alleen op mobiel) */
+.menu-close {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* 📱 Mobiele versie */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    /* Sidebar verborgen op mobiel */
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        /* ❗️ Aangepast naar de exacte hoogte van de header */
+        width: 250px;
+        height: calc(100% - 100px);
+        /* ❗️ Zorgt ervoor dat het niet over de header heen gaat */
+        background-color: #222;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+        transition: left 0.3s ease;
+        /* ❗️ Hoger dan de header zodat het niet verdwijnt */
+    }
+
+    /* Zorgt ervoor dat de sidebar correct opent */
+    .sidebar.open {
+        left: 0;
+    }
+
+    /* Sidebar sluiten knop tonen */
+    .menu-close {
+        display: block;
+    }
+
+    /* Sidebar volledig verbergen wanneer gesloten */
+    .sidebar:not(.open) {
+        display: none;
+    }
+
+    /* Navbar en header moeten boven de sidebar blijven */
+    .header {
+        z-index: 100;
+    }
+
+    /* Menu-knop uitlijning fixen */
+    .header-content {
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    .dashboard-title {
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    .menu-toggle {
+        position: relative;
+        left: 0;
+    }
+
+    .navbar {
+        z-index: 200;
+        position: relative;
+        /* Zorgt ervoor dat het de bovenste laag is */
+    }
+}
