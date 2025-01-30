@@ -107,7 +107,6 @@ body {
 
     /* Sidebar verborgen op mobiel */
     .sidebar {
-        position: fixed;
         left: -250px;
         /* ❗️ Aangepast naar de exacte hoogte van de header */
         width: 250px;

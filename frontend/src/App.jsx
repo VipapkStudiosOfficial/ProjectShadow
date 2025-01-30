@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import DashboardLayout from "./components/DashboardLayout";
+import AccountSettings from "./pages/AccountSettings";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         {/* ✅ Beheren binnen WebsiteLayout zodat Navbar/Footer altijd zichtbaar zijn */}
         <Route path="/beheren" element={<WebsiteLayout />}>
           <Route path="" element={<DashboardLayout />}>
+            <Route path="accountinstellingen" element={<AccountSettings />} />
           </Route>
         </Route>
       </Routes>

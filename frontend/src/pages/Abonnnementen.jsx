@@ -7,7 +7,6 @@ const Abonnementen = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [selectedPlan, setSelectedPlan] = useState(null);
     const [showDetails, setShowDetails] = useState(false);
-    const [compare, setCompare] = useState(false);
 
     useEffect(() => {
         setTimeout(() => {
@@ -86,41 +85,35 @@ const Abonnementen = () => {
                     </div>
                 )}
 
-                <button className="compare-button" onClick={() => setCompare(!compare)}>
-                    {compare ? "Sluit vergelijking" : "Vergelijk abonnementen"}
-                </button>
-
-                {compare && (
-                    <div className="comparison-container">
-                        <h2>Vergelijking tussen abonnementen</h2>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Kenmerk</th>
-                                    <th>Pay-as-you-go</th>
-                                    <th>Prepaid</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Maandelijkse kosten</td>
-                                    <td>€50</td>
-                                    <td>Geen</td>
-                                </tr>
-                                <tr>
-                                    <td>Korting</td>
-                                    <td>10% op huurprijzen</td>
-                                    <td>Geen</td>
-                                </tr>
-                                <tr>
-                                    <td>Inclusief huurdagen</td>
-                                    <td>Geen inbegrepen</td>
-                                    <td>20 dagen inbegrepen</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                )}
+                <div className="comparison-container">
+                    <h2>Vergelijking tussen abonnementen</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Kenmerk</th>
+                                <th>Pay-as-you-go</th>
+                                <th>Prepaid</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Maandelijkse kosten</td>
+                                <td>€50</td>
+                                <td>Geen</td>
+                            </tr>
+                            <tr>
+                                <td>Korting</td>
+                                <td>10% op huurprijzen</td>
+                                <td>Geen</td>
+                            </tr>
+                            <tr>
+                                <td>Inclusief huurdagen</td>
+                                <td>Geen inbegrepen</td>
+                                <td>20 dagen inbegrepen</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <button className="subscribe-button" onClick={handleSubscription}>
                     Abonnement afsluiten
