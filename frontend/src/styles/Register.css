@@ -257,8 +257,9 @@ button:hover {
         /* Kleiner maken op mobiele schermen */
         max-width: 350px;
         /* Beperkt de maximale grootte */
-        margin: 60px auto;
+        margin: 25px auto;
         padding: 20px;
+        transform: scale(0.9);
     }
 
     h2 {

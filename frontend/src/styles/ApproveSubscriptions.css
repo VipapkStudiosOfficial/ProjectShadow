@@ -112,6 +112,7 @@
         margin: 30px auto;
         /* Gelijke marges op mobiel */
         padding: 15px;
+        transform: scale(0.9);
     }
 
     .subscription-card {

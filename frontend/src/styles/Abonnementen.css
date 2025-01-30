@@ -326,6 +326,7 @@ table td {
     .subscription-container {
         max-width: 80%;
         padding: 15px;
+        transform: scale(1);
     }
 
     h1 {
